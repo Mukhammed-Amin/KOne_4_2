@@ -75,7 +75,7 @@
 
                     <div class="header-info-list d-none d-md-inline-block">
                         <ul class="ul-reset">
-                            <li><a href="mailto:mail@gerolddesign.com">mail@gerolddesign.com</a></li>
+                            <li><a href="mailto:{{ infouser.email }}">{{ infouser.email }}</a></li>
                         </ul>
                     </div>
 
@@ -121,7 +121,7 @@
 
                     <div class="header-info-list d-none d-md-inline-block">
                         <ul class="ul-reset">
-                            <li><a href="mailto:mail@gerolddesign.com">mail@gerolddesign.com</a></li>
+                            <li><a href="mailto:{{ infouser.email }}">{{ infouser.email }}</a></li>
                         </ul>
                     </div>
 
@@ -170,31 +170,30 @@
                 <div class="row align-items-center">
                     <div class="col-md-6">
                         <div class="hero-content-box">
-                            <span class="hero-sub-title">I am {{ infouser.name}}</span>
-                            <h1 class="hero-title">Web Developer +<br>UX Designer
+                            <span class="hero-sub-title">Я {{ infouser.name }}</span>
+                            <h1 class="hero-title">{{ infouser.work }}
                             </h1>
 
                             <div class="hero-image-box d-md-none text-center">
                                 <img src="{% static 'assets/img/hero/me.png' %}" alt="">
                             </div>
 
-                            <p class="lead">I break down complex user experinece
-                                problems to create integritiy focussed solutions that connect billions of people</p>
+                            <p class="lead">{{ infouser.description }}</p>
                             <div class="button-box d-flex flex-wrap align-items-center">
                                 <a href="#" class="btn tj-btn-secondary">Download
                                     CV</a>
                                 <ul class="ul-reset social-icons">
-                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fa-light fa-basketball"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                                    <li><a href="{{ infouser.twitter }}"><i class="fa-brands fa-twitter"></i></a></li>
+                                    <li><a href="{{ infouser.telegram }}"><i class="fa-brands fa-telegram"></i></a></li>
+                                    <li><a href="{{ infouser.linkedin }}"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li><a href="{{ infouser.github }}"><i class="fa-brands fa-github"></i></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 d-none d-md-block">
                         <div class="hero-image-box text-center">
-                            <img src="{% static 'assets/img/hero/me.png' %}" alt="">
+                            <img src="{{ infouser.image.url }}" alt="">
                         </div>
                     </div>
                 </div>
@@ -203,8 +202,8 @@
                     <div class="row">
                         <div class="col-6 col-lg-3">
                             <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                                <div class="number"><span class="odometer" data-count="14">0</span></div>
-                                <div class="text">Years of <br>Experience</div>
+                                <div class="number"><span class="odometer" data-count="14">1</span></div>
+                                <div class="text">Годы <br>Опыта</div>
                             </div>
                         </div>
                         <div class="col-6 col-lg-3">
